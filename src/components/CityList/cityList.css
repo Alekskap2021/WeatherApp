@@ -1,0 +1,41 @@
+.cities__list-item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.cities__list-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.del-city {
+  background-color: transparent;
+  border: none;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.city__title {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.city__weather-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.city__weather-list li {
+  box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.descr:first-letter {
+  text-transform: uppercase;
+}
+
+.empty {
+  text-align: center;
+}
