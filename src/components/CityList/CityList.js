@@ -26,10 +26,6 @@ const CityList = () => {
     return newDateArr.join(` `);
   };
 
-  const deleteCity = (id) => {
-    setWeatherArr(weatherArr.filter(({ city }) => city.id !== id));
-  };
-
   const renderCityWeatherList = (arr) => {
     const list = arr.map(({ city, list }) => {
       return (
