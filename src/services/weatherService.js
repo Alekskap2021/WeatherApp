@@ -6,6 +6,7 @@ const useWeatherService = () => {
     const answer = await fetch(
       `${_baseUrl}data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${_apiKey}&units=metric`
     );
+
     return await answer.json();
   };
 
