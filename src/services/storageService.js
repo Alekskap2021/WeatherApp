@@ -1,18 +1,19 @@
 const useStorageService = () => {
-  const getItems = (name) => (localStorage.length ? JSON.parse(localStorage.getItem(name)) : []);
+  const getItems = (name) =>
+    sessionStorage.length ? JSON.parse(sessionStorage.getItem(name)) : [];
 
   const setItem = (name, val) => {
     const oldArr = getItems(name) ? getItems(name) : [];
-    localStorage.setItem(name, JSON.stringify([...oldArr, val]));
+    sessionStorage.setItem(name, JSON.stringify([...oldArr, val]));
   };
 
   const removeItem = (name, id) => {
     const oldArr = getItems(name) ? getItems(name) : [];
     const newArr = oldArr.filter(({ city }) => city.id !== id);
-    localStorage.setItem(name, JSON.stringify(newArr));
+    sessionStorage.setItem(name, JSON.stringify(newArr));
   };
 
-  const removeAll = () => localStorage.clear();
+  const removeAll = () => sessionStorage.clear();
 
   return { getItems, setItem, removeItem, removeAll };
 };
